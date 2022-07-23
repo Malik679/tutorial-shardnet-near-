@@ -5,6 +5,16 @@ Don't forget to follow my Twitter https://www.twitter.com/mbagolll
 
 **Mission I - VI**
 
+Validation form for tasks 5,6 and 7
+
+Untuk task 5 anda harus membuat artikel tentang tutorial shardnet
+
+Task 6 menjalankan PING tutorial ada di paling akhir
+
+Task 7 membuat data science untuk staking
+
+Form : https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform
+
 ## Persyaratan Perangkat Keras yang Direkomendasikan
 
 - 4x CPUs; the faster clock speed the better
