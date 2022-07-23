@@ -164,7 +164,7 @@ near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "<pool 
 Change "pool id", "accountId", "public key", "accountId" parameters here!
 My example for this
 ```bash
-near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "0xdexa", "owner_id": "0xdedxa.shardnet.near", "stake_public_key": "ed25519:FS6KjVhKNaZHnwrSerQBPLJLJGYZkH66j9FNbALHWYz5", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="0xdexa.shardnet.near" --amount=30 --gas=300000000000000
+near call cotote.factory.shardnet.near create_staking_pool '{"staking_pool_id": "coyote", "owner_id": "coyote.shardnet.near", "stake_public_key": "ed25519:6gp2bTuvLaSCpACDoPauqzDLGyvX1ALDr3B3tEHPGDqy", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="0xdexa.shardnet.near" --amount=30 --gas=300000000000000
 ```
 Jika semuanya baik-baik saja, Anda akan melihat diri Anda dalam perintah dekat proposal. Mari kita lihat harga kursi di bagian bawah proposal near memerintah. Dan kemudian kita perlu mempertaruhkan. Ingatlah untuk mengatur lingkungan untuk shardnet!
 ```bash
