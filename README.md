@@ -1,3 +1,6 @@
+Don't forget to follow my Twitter https://www.twitter.com/mbagolll
+
+
 # Near - Stakewars III
 
 **Mission I - VI**
