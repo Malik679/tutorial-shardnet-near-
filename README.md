@@ -2,7 +2,7 @@
 
 **Mission I - VI**
 
-## Recommended Hardware Requirements
+## Persyaratan Perangkat Keras yang Direkomendasikan
 
 - 4x CPUs; the faster clock speed the better
 - 8GB RAM
@@ -95,14 +95,14 @@ cd ~/.near-credentials/shardnet/
 cp wallet.json ~/.near/validator_key.json
 nano validator_key.json
 ```
-Change the account ID and Private Key parameter accordingly, then exit nano editor.
+Ubah ID akun dan parameter Private Key yang sesuai, lalu keluar dari editor nano.
 ```bash
 { 
 "account_id": "xx.factory.shardnet.near", 
 "public_key":"ed25519:HeaBJ3xLgvZacQWmEctTeUqyfSU4SDEnEwckWxd92W2G", "secret_key": "ed25519:****" 
 }
 ```
-Create a service file (one command)
+Buat file layanan (satu perintah)
 ```bash
 sudo tee /etc/systemd/system/neard.service > /dev/null <<EOF 
 [Unit] 
@@ -122,7 +122,7 @@ KillMode=mixed
 WantedBy=multi-user.target 
 EOF
 ```
-Now start the service and see logs, that everything works fine. You should see it downloading headers firstly and the blocks. Waiting for full sync.
+Sekarang mulai layanan dan lihat log, bahwa semuanya berfungsi dengan baik. Anda akan melihatnya mengunduh tajuk terlebih dahulu dan blok. Menunggu sinkronisasi penuh.
 ```bash
 sudo systemctl daemon-reload 
 sudo systemctl enable neard 
@@ -144,7 +144,7 @@ My example for this
 ```bash
 near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "0xdexa", "owner_id": "0xdedxa.shardnet.near", "stake_public_key": "ed25519:FS6KjVhKNaZHnwrSerQBPLJLJGYZkH66j9FNbALHWYz5", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="0xdexa.shardnet.near" --amount=30 --gas=300000000000000
 ```
-If everything is fine, you should see yourself in near proposals command. Let’s look at the seat price in the bottom of near proposals command. And then we will need to stake. Remember to set environmentals for shardnet!
+Jika semuanya baik-baik saja, Anda akan melihat diri Anda dalam perintah dekat proposal. Mari kita lihat harga kursi di bagian bawah proposal near memerintah. Dan kemudian kita perlu mempertaruhkan. Ingatlah untuk mengatur lingkungan untuk shardnet!
 ```bash
 near proposals
 ```
