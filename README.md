@@ -1,5 +1,14 @@
 Don't forget to follow my Twitter https://www.twitter.com/mbagolll
 
+## Useful links
+
+Wallet: https://wallet.shardnet.near.org/
+
+Explorer: https://explorer.shardnet.near.org/ 
+
+
+### Create a wallet
+https://wallet.shardnet.near.org/
 
 # Near - Stakewars III
 
