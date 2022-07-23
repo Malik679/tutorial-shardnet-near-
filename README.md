@@ -172,7 +172,7 @@ near proposals
 ```
 Change parametres for staking accordingly!
 ```bash
-near call 0xdexa.factory.shardnet.near  deposit_and_stake --amount 1200 --accountId 0xdexa.shardnet.near --gas=300000000000000
+near call coyote.factory.shardnet.near  deposit_and_stake --amount 200 --accountId coyote.shardnet.near --gas=300000000000000
 ```
 Dalam beberapa epoch, Anda akan dapat melihat diri Anda di penjelajah dan dengan mengetik
 ```bash
