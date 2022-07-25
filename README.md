@@ -4,7 +4,9 @@ Don't forget to follow my Twitter https://www.twitter.com/mbagolll
 
 yang anda perlukan adalah akun azure saya sarankan anda membuat akunnya terlebih dahulu https://azure.microsoft.com/en-us/free/
     
-    1. Pertama pilih virtual machines lalu 
+1. Pertama pilih virtual machines lalu 
+
+![image.png](https://raw.githubusercontent.com/Malik679/gambar/main/1658721621579.png)
 
 
 
