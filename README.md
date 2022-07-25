@@ -1,5 +1,16 @@
 Don't forget to follow my Twitter https://www.twitter.com/mbagolll
 
+# Tutorial membuat vps di azure
+
+yang anda perlukan adalah akun azure saya sarankan anda membuat akunnya terlebih dahulu https://azure.microsoft.com/en-us/free/
+    
+    1. Pertama pilih virtual machines lalu 
+
+
+
+
+
+
 ## Useful links
 
 Wallet: https://wallet.shardnet.near.org/
