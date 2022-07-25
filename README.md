@@ -33,7 +33,7 @@ lalu pilih ukuran+kinerja
 
 ![Screenshot 2022-07-25 120121](https://user-images.githubusercontent.com/58283112/180702210-86e9dbf8-05fb-4e20-8a73-575a87d91fb2.png)
 
-7. step terakhir silahkan ke beranda dan klik nama vps kalian lalu langsung saja klik start (jika tombol start tidak bisa di klik silahkan kalian refresh terlebih dahulu)
+7. step terakhir silahkan ke beranda dan klik nama vps kalian lalu langsung saja klik start (jika tombol start tidak bisa di klik silahkan kalian refresh terlebih dahulu) setelah itu copy IPv4 kalian ke terminal, kalau saya pakai termius aplikasi bisa di cari di playstore 
 
 SELESAI! JANGAN LUPA BERI BINTANG DAN FOLLOW  GITHUB SAYA
 
