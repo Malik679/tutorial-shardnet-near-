@@ -37,6 +37,8 @@ lalu pilih ukuran+kinerja
 
 SELESAI! JANGAN LUPA BERI BINTANG DAN FOLLOW  GITHUB SAYA
 
+jangan lupa juga untuk isi Chunk-Only Producer Onboarding Form https://nearprotocol1001.typeform.com/to/Z39N7cU9
+
 ## Useful links
 
 Wallet: https://wallet.shardnet.near.org/
