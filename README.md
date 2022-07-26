@@ -251,10 +251,75 @@ cek logs
 cat $HOME/nearcore/logs/all.log
 ```
 
+# challenge 8
+Install cargo and Rust in case you don't have it. This command is for Linux or MacOS.
+
+```bash
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+
+source $HOME/.cargo/env
+```
+
+Add the wasm32-unknown-unknown toolchain
+
+```bash
+rustup target add wasm32-unknown-unknown
+```
+
+Clone the project
+
+```bash
+git clone https://github.com/zavodil/near-staking-pool-owner
+```
+
+Compile smart contract
+
+```bash
+cd near-staking-pool-owner/contract
+rustup target add wasm32-unknown-unknown
+cargo build --target wasm32-unknown-unknown --release
+```
+
+Deploy smart contract on your owner account. Adjust the path to .wasm file if required.
+
+replace xx with your wallet name
+
+```bash
+NEAR_ENV=shardnet near deploy xx.shardnet.near --wasmFile target/wasm32-unknown-unknown/release/contract.wasm
+```
+
+Initialize the smart contract picking accounts for splitting revenue.
+
+Ganti xx dengan nama wallet kalian, xx1 bisa isi nama wallet saya(coyote.shardnet.near)/teman kalian, untuk xx2 bisa isi nama wallet kalian sendiri
+
+```bash
+CONTRACT_ID=xx.shardnet.near
+
+# Change numerator and denomitor to adjust the % for split.
+near call $CONTRACT_ID new '{"staking_pool_account_id": "xx.factory.shardnet.near", "owner_id":"xx.shardnet.near", "reward_receivers": [["xx1.shardnet.near", {"numerator": 3, "denominator":10}], ["xx2.shardnet.near", {"numerator": 70, "denominator":100}]]}' --accountId $CONTRACT_ID
+```
+
+Contoh 
+
+```bash
+CONTRACT_ID=coyote.shardnet.near
+
+# Change numerator and denomitor to adjust the % for split.
+near call $CONTRACT_ID new '{"staking_pool_account_id": "coyote.factory.shardnet.near", "owner_id":"coyote.shardnet.near", "reward_receivers": [["smartinvest.shardnet.near", {"numerator": 3, "denominator":10}], ["coyote.shardnet.near", {"numerator": 70, "denominator":100}]]}' --accountId $CONTRACT_ID
+```
+
+Wait until you start receiving rewards on your node staking pool. Do a withdraw of rewards.
+
+xx ganti nama wallet kalian
+
+```bash
+CONTRACT_ID=xx.shardnet.near
+NEAR_ENV=shardnet near call $CONTRACT_ID withdraw '{}' --accountId $CONTRACT_ID --gas 200000000000000
+```
+
 
 # useful commands
 
-Ganti xx dengan nama wallet kalian (Replace xx with your wallet name)
 
 1. Cek proposal
 
