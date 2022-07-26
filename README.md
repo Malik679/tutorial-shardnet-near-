@@ -254,7 +254,7 @@ cat $HOME/nearcore/logs/all.log
 
 # useful commands
 
-Ganti xx dengan nama wallet kalian
+Ganti xx dengan nama wallet kalian (Replace xx with your wallet name)
 
 1. Cek proposal
 
@@ -262,24 +262,25 @@ Ganti xx dengan nama wallet kalian
 near proposals | grep xx.factory.shardnet.near
 ```
 
-2. Cek validator kalian apakah aktif atau tidak, jika tidak aktif tidak keluar output apapun
+2. Cek validator kalian apakah aktif atau tidak, jika tidak aktif tidak keluar output apapun (Check your validator whether it is active or not, if it is not active, no output comes out)
 
 ```bash
 near validators current | grep xx.factory.shardnet.near
 ```
 
-3. Cek next status validator kalian 
+3. Cek next status validator kalian (check your next validator status)
 
 ```bash 
 near validators next | grep xx.factory.shardnet.near
 ```
 
-4. Mengecek log
+4. Mengecek log (Checking logs)
 
 ```bash 
 journalctl -n 100 -f -u neard
 ```
-Atau jika ingin berwarna jalankan command ini:
+Atau jika ingin berwarna jalankan command ini (Or if you want color run this command):
+
 
 ```bash
 sudo apt install ccze
@@ -299,13 +300,13 @@ near view xx.factory.shardnet.near get_accounts '{"from_index": 0, "limit": 10}'
 ```bash
 curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq  '.result.current_validators[] | select(.account_id | contains ("xx.factory.shardnet.near"))'
 ```
-7. Cek alasan kenapa validator anda ter-kickout
+7. Cek alasan kenapa validator anda ter-kickout (Check the reason why your validator was kicked out)
 
 ```bash
 curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("xx.factory.shardnet.near"))' | jq .reason
 ```
 
-8. Cek sinkronisasi
+8. Cek sinkronisasi (check sync)
 
 ```bash 
 curl -s http://127.0.0.1:3030/status | jq .sync_info
