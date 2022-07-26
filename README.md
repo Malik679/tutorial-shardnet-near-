@@ -244,7 +244,7 @@ near validators next | grep $POOLID >> $LOGS/all.log
 contrab -e
 ```
 ```bash
-*/5 * * * * sh $HOME/nearcore/scripts/ping.sh
+0 */2 * * * sh $HOME/nearcore/scripts/ping.sh
 ```
 cek logs
 ```bash
