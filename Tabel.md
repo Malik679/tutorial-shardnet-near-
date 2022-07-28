@@ -55,3 +55,12 @@ jangan lupa juga untuk isi Chunk-Only Producer Onboarding Form https://nearproto
 |   6        | Membuat Ping Otomatis Setiap 2 Jam    | 19 Juli 2022  | 11 Agustus 2022 |[Tutorial](https://github.com/Malik679/tutorial-shardnet-near-#membuat-ping-setiap-2-jam-challenge-6) |
 |   7        | Membuat Data Science untuk Staking    | 22 Juli 2022  | 07 September 2022 |-
 |   8        | SPLIT REWARD KE MULTIPLE AKUN         | 26 Juli 2022  | 08 Agustus 2022 |[Tutorial](https://github.com/Malik679/tutorial-shardnet-near-/blob/main/README.md#split-reward-ke-multiple-akun-challenge-8)|
+
+
+
+Summary for the point system:
+* Delegated NEAR Points (DNP): at the end of the Stake Wars program, each Delegated NEAR Point (DNP) will be translated into 500 NEAR tokens delegated to your mainnet account for 1 year.
+* Unlocked NEAR Points (UNP): at the end of the Stake Wars program, each Unlocked NEAR Point (UNP) will be translated into 1 unlocked NEAR token, granted to your mainnet account.
+
+Form for Stakewars submissions - Will update when new challenge :): https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp3A5vPdEgxkHx3ABjg/viewform
+
