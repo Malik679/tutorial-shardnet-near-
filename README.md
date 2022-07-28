@@ -321,7 +321,7 @@ cek logs
 cat $HOME/nearcore/logs/all.log
 ```
 
-# challenge 8
+# SPLIT REWARD KE MULTIPLE AKUN (CHALLENGE 8)
 Install cargo and Rust in case you don't have it. This command is for Linux or MacOS.
 
 ```bash
