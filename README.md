@@ -70,7 +70,7 @@ Form : https://docs.google.com/forms/d/e/1FAIpQLScp9JEtpk1Fe2P9XMaS9Gl6kl9gcGVEp
 - 500GB of storage (SSD or NVME)
 - Permanent Internet connection (traffic will be minimal during devnet; 10Mbps will be plenty - for production at least 100Mbps is expected)
 
-## Instalasi
+## SETUP NEAR-CLI (CHALLENGE 1)
 
 Update, Download Pacakge and Install Python 
 ```bash
@@ -104,6 +104,9 @@ Install Cargo and Rust (Wait)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 ```
+
+## SETUP WALLET DAN VALIDATOR(CHALLENGE 2)
+
 
 Donwload Binaries
 ```bash
@@ -196,6 +199,12 @@ journalctl -n 100 -f -u neard | ccze -A
 ```
 ![SyncNode](https://user-images.githubusercontent.com/65535542/180588601-ded8a58b-67fa-4297-985e-0057bbc3d339.png)
 Wait a few minutes until download and sync
+
+
+## MOUNTING STAKING POOL (CHALLENGE 3)
+
+
+
 Now let’s deploy a contract of our staking pool with 30 NEAR staked!
 ```bash
 near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "<pool id>", "owner_id": "<accountId>", "stake_public_key": "<public key>", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="<accountId>" --amount=30 --gas=300000000000000
@@ -218,6 +227,67 @@ Dalam beberapa epoch, Anda akan dapat melihat diri Anda di penjelajah dan dengan
 near validators current 
 near validators next
 ```
+
+
+## MONITORING NODE STATUS (CHALLENGE 4)
+
+Pada bagian ini, kalian akan membuat monitoring node status untuk melihat versi node dan lain sebagainya.
+
+1. Install jq
+
+    ```bash
+    sudo apt install curl jq
+    ```
+
+2. Cek versi node kalian
+
+    ```bash
+    curl -s http://127.0.0.1:3030/status | jq .version
+    ```
+    
+    ![Screenshot_33](https://user-images.githubusercontent.com/35837931/180384432-a17d6a2c-d8ff-4980-aa22-535c405aab9c.png)
+
+    
+    - Cek Delegators dan Stake
+
+        Seperti biasa, ganti `xx` dengan nama wallet kalian.
+
+        ```bash
+        near view xx.factory.shardnet.near get_accounts '{"from_index": 0, "limit": 10}' --accountId xx.shardnet.near
+
+        ```
+    - Cek Block Produced
+        
+        Ganti `xx` dengan nama wallet kalian.
+        
+        ```bash
+        curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq  '.result.current_validators[] | select(.account_id | contains ("xx.factory.shardnet.near"))'
+        ```
+        
+    - Cek Reason Validator Kicked
+        
+        Ganti `xx` dengan nama wallet kalian.
+        
+        ```bash
+        curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("xx.factory.shardnet.near"))' | jq .reason
+        ```
+
+3. Cek Sinkronisasi
+
+    Pastikan status `syncing` adalah `false` agar validators kalian tidak tertinggal block. Jika masih `true` maka node kalian masih belum sepenuhnya sinkron.
+
+    ```
+    curl -s http://127.0.0.1:3030/status | jq .sync_info
+    ```
+
+
+
+
+
+
+
+
+## MEMBUAT PING SETIAP 2 JAM (CHALLENGE 6)
 
 ```bash
 mkdir $HOME/nearcore/logs
