@@ -55,7 +55,7 @@ jangan lupa juga untuk isi Chunk-Only Producer Onboarding Form https://nearproto
 |   6        | Membuat Ping Otomatis Setiap 2 Jam    | 19 Juli 2022  | 11 Agustus 2022 |[Tutorial](https://github.com/Malik679/tutorial-shardnet-near-/blob/main/6.md) |
 |   7        | Membuat Data Science untuk Staking    | 22 Juli 2022  | 07 September 2022 |-
 |   8        | SPLIT REWARD KE MULTIPLE AKUN         | 26 Juli 2022  | 08 Agustus 2022 |[Tutorial](https://github.com/Malik679/tutorial-shardnet-near-/blob/main/8.md)|
-
+|   9        | Manage Shardnet Uptime                | 28 Juli 2022  | 11 Agustus 2022 |[Tutorial](https://github.com/Malik679/tutorial-shardnet-near-/blob/main/9.md)|
 
 
 Summary for the point system:
